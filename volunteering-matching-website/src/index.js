@@ -6,12 +6,9 @@ import { AuthProvider } from './AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <AuthProvider
-      authorizationParams={{
-        redirect_uri: window.location.origin
-      }}>
-      <App />
-    </AuthProvider>
+    <React.StrictMode>
+    <App />
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -19,32 +19,35 @@ const Navigation = ({searchbtn}) => {
 
     return (
     <>    
-        <div className="mainHeader"> 
-          <div className='container'>
-              <div className='logo'>
-                  <img src='./images/logo.jpg' alt='logo'></img>
-              </div>
-              <div className='search_box'>
-                  <input type='text' value={search} placeholder='Search the name of a country...' autoComplete='off' onChange={(e) => setSearch(e.target.value)}></input>
-                  <button onClick={() => searchbtn (search)}>Search</button>
-              </div>
-              <div className='icon'>                
-                 
-                          <div className='account'>
-                              <div className='user_icon'>                      
-                                  <AiOutlineUser/>
-                              </div> 
-                              <p>Hello, {email}!</p> 
-                          </div>   
-                              
-                  <div className='second_icon'>
-                  <Link to="/cart" className='link'><BsBagCheck/></Link>              
-                  </div>              
-              </div>
-          </div>
-      </div> 
+          <div className="mainHeader"> 
+            <div className='container'>
+                <div className='logo'>
+                    <img src='./img/logo.jpg' alt='logo'></img>
+                </div>
+                <div className='search_box'>
+                    <input type='text' value={search} placeholder='Search the name of a country...' autoComplete='off' onChange={(e) => setSearch(e.target.value)}></input>
+                    <button onClick={() => searchbtn (search)}>Search</button>
+                </div>
+                <div className='icon'>                
+                    {
+                        isAuthenticated &&
+                        (
+                            <div className='account'>
+                                <div className='user_icon'>                      
+                                    <AiOutlineUser/>
+                                </div> 
+                                <p>Hello, {email}!</p> 
+                            </div>   
+                        )
+                    }                    
+                    <div className='second_icon'>
+                    <Link to="/cart" className='link'><BsBagCheck/></Link>              
+                    </div>              
+                </div>
+            </div>
+        </div>
 
-      <div className='header'>
+        <div className='header'>
         <div className='container'>
             <div className='navig'>
                 <ul>
@@ -74,7 +77,7 @@ const Navigation = ({searchbtn}) => {
                         { 
                             isAuthenticated && email === 'admin' && 
                             (
-                                <Link to='/crudOrders' className='link'>Admin-People Interested</Link>
+                                <Link to='/crudOrders' className='link'>Admin-FormsCompleted</Link>
                             )
                         }
                     </li>
@@ -89,7 +92,8 @@ const Navigation = ({searchbtn}) => {
                 }                          
             </div>
         </div>
-    </div>     
+    </div>         
+
     </>
   )
 }
