@@ -1,11 +1,17 @@
 import React, {useState} from 'react'
+import Footer from './footer'
+import { BrowserRouter } from 'react-router-dom'
 
 const App = () => {
 
   return (
     <>
-    <h1>Hello World!</h1>
+        <BrowserRouter>
+            < Footer />
+        </BrowserRouter>
+
     </>
+
   );
 }
 
