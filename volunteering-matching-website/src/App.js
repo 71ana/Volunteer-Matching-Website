@@ -1,10 +1,14 @@
 import React, {useState} from 'react'
+import { BrowserRouter } from 'react-router-dom';
+import Navigation from './Navigation'
 
 const App = () => {
-
+  
   return (
     <>
-    <h1>Hello World!</h1>
+      <BrowserRouter>
+            <Navigation />
+      </BrowserRouter>
     </>
   );
 }
