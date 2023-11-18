@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-globals */
 import React, {useEffect} from 'react'
 import { FaShippingFast } from 'react-icons/fa';
 import { FaWpforms } from "react-icons/fa";
