@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { BrowserRouter } from 'react-router-dom';
 import Navigation from './Navigation'
+import Footer from './footer'
 import { EmailProvider } from './EmailContext';
 import { AuthProvider } from './AuthContext';
 import Rout from './rout';
@@ -23,12 +24,14 @@ const App = () => {
         <EmailProvider value={{ email, setEmail }}>
           <BrowserRouter>
             <Navigation searchbtn={searchbtn} />
-            <Rout
-            />
+              <Rout
+              />
+            < Footer />
           </BrowserRouter>
         </EmailProvider>
       </AuthProvider>
     </>
+
   );
 }
 
