@@ -18,6 +18,9 @@ const Navigation = ({searchbtn}) => {
 
     return (
     <>    
+    <div className='login-container'> 
+        <Login email={email}/>       
+    </div>
           <div className="mainHeader"> 
             <div className='container'>
                 <div className='logo'>
@@ -35,7 +38,7 @@ const Navigation = ({searchbtn}) => {
                                 <div className='user_icon'>                      
                                     <AiOutlineUser/>
                                 </div> 
-                                <p>Welcome!</p> 
+                                <p>Welcome, {email}!</p> 
                             </div>   
                         )
                     }                    
@@ -66,7 +69,7 @@ const Navigation = ({searchbtn}) => {
                         { 
                             isAuthenticated && email === 'admin' && 
                             (
-                                <Link to='/crudOpportunities' className='link'>Admin-Opportunities</Link>
+                                <Link to='/admin-programs' className='link'>Manage programs</Link>
                             )
                         }
                     </li>
@@ -74,15 +77,15 @@ const Navigation = ({searchbtn}) => {
                         { 
                             isAuthenticated && email === 'admin' && 
                             (
-                                <Link to='/crudUsers' className='link'>Admin-Users</Link>
+                                <Link to='/admin-users' className='link'>Manage users</Link>
                             )
                         }
                     </li>
-                    <li className="adminOrders">
+                    <li className="adminApplications">
                         { 
                             isAuthenticated && email === 'admin' && 
                             (
-                                <Link to='/crudFormsCompleted' className='link'>Admin-FormsCompleted</Link>
+                                <Link to='/admin-application' className='link'>Manage applications</Link>
                             )
                         }
                     </li>

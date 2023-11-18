@@ -10,7 +10,9 @@ import Contact from "./Contact";
 import Opportunity from './opportunities'
 import Form from './form'
 import Apply from './apply'
-
+import AdminPrograms from './admin-programs'
+import AdminUsers from './admin-users'
+import AdminApplications from './admin-applications'
 
 const Rout = ({opportunity, setOpportunity, detail, view, close, setClose, form, setForm, addtoform}) => {
   return (
@@ -25,6 +27,9 @@ const Rout = ({opportunity, setOpportunity, detail, view, close, setClose, form,
           <Route path='/login' element={<Login />} />
           <Route path='/howToSignUp' element={<HowToSignUp />} />
           <Route path='/Contact' element={<Contact />} />
+          <Route path='/admin-programs' element={<AdminPrograms />} />
+          <Route path='/admin-users' element={<AdminUsers />} />
+          <Route path='/admin-application' element={<AdminApplications />} />
       </Routes>
     </EmailProvider>
     </>
