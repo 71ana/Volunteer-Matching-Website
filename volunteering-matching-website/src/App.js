@@ -44,7 +44,7 @@ const App = () => {
     }
     else
     { 
-      setForm([...form, {...product, qty:1}])
+      setForm([...form, {...opportunity, qty:1}])
       alert("The opportunity has been successfully chosen. You still have to apply. Go to the form section to complete the additional information required.")
     }
   } 

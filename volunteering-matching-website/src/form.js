@@ -43,15 +43,15 @@ const Form = ({form, setForm}) => {
             }))
         }
     }
-    // Total price
+
     const Totalprice = form.reduce((price, item) => price + item.qty * item.Price, 0)
   return (
     <>
     <div className='formcontainer'>
         {form.length === 0 && 
         <div className='emptyform'>
-        <h2 className='empty'>Your form is empty.</h2>
-        <Link to='/opportunity' className='emptyformbtn'>Feel free to start shopping now!</Link>
+        <h2 className='empty'>You have not chosen any program available yet.</h2>
+        <Link to='/opportunity' className='emptyformbtn'>Look for a volunteering program that fits you!</Link>
         </div>
         }
         <div className='contant'>
@@ -65,9 +65,9 @@ const Form = ({form, setForm}) => {
                             </div>
                             <div className='detail'>
                                 <div className='info'>
-                                <h4>{curElm.Cat}</h4>
+                                <h4>{curElm.Country}</h4>
                                 <h3>{curElm.Title}</h3>
-                                <p>Price: {curElm.Price} RON</p>
+                                <p>Price: {curElm.Rating} RON</p>
                                 <div className='qty'>
                                     <button className='decqty' onClick={() => decqty(curElm)}>-</button>
                                     <input type='text' value={curElm.qty}></input> 
@@ -88,7 +88,7 @@ const Form = ({form, setForm}) => {
             form.length > 0 &&
             <>
             <h2 className='totalprice'>total: {Totalprice} RON</h2>
-            <Link to='/checkout' className='checkout'>Checkout</Link>
+            <Link to='/checkout' className='checkout'>Apply to this program</Link>
             </>
         }
     </div>

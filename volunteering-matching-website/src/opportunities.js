@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { FaWpforms } from "react-icons/fa";
 import { BsEye } from 'react-icons/bs';
 import { AiOutlineHeart, AiOutlineCloseCircle } from 'react-icons/ai';
 import Opportunitydetail from './opportunitiesdetail'
@@ -41,8 +41,8 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                             <div className='detail'>
                                 <h4>{curElm.Country}</h4>
                                 <h2>{curElm.Title}</h2>
-                                <p>Introducing our versatile and comfortable clothing item, designed to complement any occasion. This opportunity is expertly crafted from high-quality materials, ensuring both style and comfort. With a wide range of sizes available, you can find the perfect fit for any body type. Whether you're dressing up for a special event or looking for an everyday favorite, this piece is the ideal choice for both fashion and ease...</p>
-                                <h3>{curElm.Rating} RON</h3>
+                                <p>Embark on a unique volunteering journey where your contribution goes beyond borders. Join our program, where your stay and meals are provided, ensuring your focus remains on making a meaningful impact. Engage in hands-on activities tailored to the community's needs, from teaching and building to sustainable projects. Immerse yourself in local culture, forming connections that last a lifetime. Your volunteer experience becomes a seamless blend of purposeful work, cultural exchange, and the assurance of a comfortable stay. Choose this program for an enriching adventure where every moment is dedicated to positive change...</p>
+                                <h3>{curElm.Rating} <FaRegStar /></h3>
                                 <div className='icon'>
                                 {
                                     isAuthenticated ? 
@@ -90,9 +90,9 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                                           <div className='icon'>
                                             {
                                                 isAuthenticated ? 
-                                                <li onClick={() => addtoform (curElm)}><AiOutlineShoppingCart /></li>
+                                                <li onClick={() => addtoform (curElm)}><FaWpforms /></li>
                                                 :
-                                                <a href="/login"><AiOutlineShoppingCart /></a>
+                                                <a href="/login"><FaWpforms /></a>
                                             }
                                             <li onClick={() => view (curElm)}><BsEye /></li>                                    
                                           </div>
