@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 import React, {useEffect} from 'react'
 import { FaShippingFast } from 'react-icons/fa';
-import { BsBagCheck } from 'react-icons/bs';
+import { FaWpforms } from "react-icons/fa";
 import { AiOutlineUser } from 'react-icons/ai';
 import { CiLogin } from 'react-icons/ci';
 import { CiLogout } from 'react-icons/ci';
@@ -41,7 +41,7 @@ const Navigation = ({searchbtn}) => {
                         )
                     }                    
                     <div className='second_icon'>
-                    <Link to="/cart" className='link'><BsBagCheck/></Link>              
+                    <Link to="/form" className='link'><FaWpforms/></Link>              
                     </div>              
                 </div>
             </div>
@@ -55,13 +55,19 @@ const Navigation = ({searchbtn}) => {
                         <Link to='/' className='link'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/product' className='link'>Countries</Link>
+                        <Link to='/opportunity' className='link'>Opportunities</Link>
+                    </li>
+                    <li>
+                        <Link to='/contact' className='link'>Contact</Link>
+                    </li>
+                    <li>
+                        <Link to='/howtosignup' className='link'>How to sign up?</Link>
                     </li>
                     <li className="admin">
                         { 
                             isAuthenticated && email === 'admin' && 
                             (
-                                <Link to='/crudProducts' className='link'>Admin-Countries</Link>
+                                <Link to='/crudOpportunities' className='link'>Admin-Opportunities</Link>
                             )
                         }
                     </li>
@@ -77,7 +83,7 @@ const Navigation = ({searchbtn}) => {
                         { 
                             isAuthenticated && email === 'admin' && 
                             (
-                                <Link to='/crudOrders' className='link'>Admin-FormsCompleted</Link>
+                                <Link to='/crudFormsCompleted' className='link'>Admin-FormsCompleted</Link>
                             )
                         }
                     </li>
