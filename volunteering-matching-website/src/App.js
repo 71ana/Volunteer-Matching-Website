@@ -55,7 +55,7 @@ const App = () => {
      <AuthProvider>
         <EmailProvider value={{ email, setEmail }}>
           <BrowserRouter>
-            <Navigation searchbtn={searchbtn} />
+            <Navigation searchbtn={searchbtn}/>
             <Rout
             opportunity={opportunity}
             setOpportunity={setOpportunity}

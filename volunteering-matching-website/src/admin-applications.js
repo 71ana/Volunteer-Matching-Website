@@ -34,7 +34,7 @@ const AdminApplications = () => {
         if(adddata)
         {
             alert("Data added successfully!");
-            window.location.reload();
+            await fetch();
         }
         else
         {
@@ -89,7 +89,7 @@ const AdminApplications = () => {
         {
             await updateDoc(updateref, {Name: name, Adress: adress, Phone: phone, StartDate: startDate, Duration: duration, Days: days, Education: education, Profession: profession, CVV: CVV, Skills: skills, Interest: interest, Geographic: geographic, Roles: roles, Travel: travel, Accomodation: accomodation, Days: days, Emergency: emergency, Questions: questions, Terms: terms});
             alert("Data updated successfully!");
-            window.location.reload();
+            await fetch();
         } 
         catch (error) 
         {
@@ -104,7 +104,7 @@ const AdminApplications = () => {
         {
             await deleteDoc(delref);
             alert("Data deleted successfully!");
-            window.location.reload();
+            await fetch();
         } 
         catch (error) 
         {

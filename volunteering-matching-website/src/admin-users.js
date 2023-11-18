@@ -20,7 +20,7 @@ const CrudUsers = () => {
         if(adddata)
         {
             alert("Data added successfully!");
-            window.location.reload();
+            await fetch();
         }
         else
         {
@@ -59,7 +59,7 @@ const CrudUsers = () => {
         {
             await updateDoc(updateref, {Name: Name, Email: Email, Password: Password});
             alert("Data updated successfully!");
-            window.location.reload();
+            await fetch();
         } 
         catch (error) 
         {
@@ -74,7 +74,7 @@ const CrudUsers = () => {
         {
             await deleteDoc(delref);
             alert("Data deleted successfully!");
-            window.location.reload();
+            await fetch();
         } 
         catch (error) 
         {
