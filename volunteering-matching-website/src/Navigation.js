@@ -35,7 +35,7 @@ const Navigation = ({searchbtn}) => {
                                 <div className='user_icon'>                      
                                     <AiOutlineUser/>
                                 </div> 
-                                <p>Hello, {email}!</p> 
+                                <p>Welcome!</p> 
                             </div>   
                         )
                     }                    
