@@ -75,7 +75,7 @@ const Home = () => {
                 </div>
                 
                 <div className='detail'>
-                    <Link to="/Opportunities" className="customLink">Search for a program...</Link>
+                    <Link to="/opportunity" className="customLink">Search for a program...</Link>
                 </div>
             </div>
         </div>

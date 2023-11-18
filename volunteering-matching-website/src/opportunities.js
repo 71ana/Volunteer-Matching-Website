@@ -6,7 +6,7 @@ import Opportunitydetail from './opportunitiesdetail'
 import './opportunities.css'
 import { useAuth } from './AuthContext';
 import { Link } from 'react-router-dom';
-import { FaRegStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
 
 const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose, addtoform}) => {
     const { isAuthenticated, setAuthenticationStatus } = useAuth();
@@ -42,7 +42,7 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                                 <h4>{curElm.Country}</h4>
                                 <h2>{curElm.Title}</h2>
                                 <p>Embark on a unique volunteering journey where your contribution goes beyond borders. Join our program, where your stay and meals are provided, ensuring your focus remains on making a meaningful impact. Engage in hands-on activities tailored to the community's needs, from teaching and building to sustainable projects. Immerse yourself in local culture, forming connections that last a lifetime. Your volunteer experience becomes a seamless blend of purposeful work, cultural exchange, and the assurance of a comfortable stay. Choose this program for an enriching adventure where every moment is dedicated to positive change...</p>
-                                <h3>{curElm.Rating} <FaRegStar /></h3>
+                                <h3>{curElm.Rating} <FaStar /></h3>
                                 <div className='icon'>
                                 {
                                     isAuthenticated ? 
@@ -74,6 +74,10 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                         <li onClick={() => filtteropportunity ("Palestine")}>Palestine</li>
                         <li onClick={() => filtteropportunity ("Israel")}>Israel</li>
                         <li onClick={() => filtteropportunity ("Egypt")}>Egypt</li>
+                        <li onClick={() => filtteropportunity ("Namibia")}>Namibia</li>
+                        <li onClick={() => filtteropportunity ("Somalia")}>Somalia</li>
+                        <li onClick={() => filtteropportunity ("Sudan")}>Sudan</li>
+                        <li onClick={() => filtteropportunity ("Sierra Leone")}>Sierra Leone</li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +104,7 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                                         <div className='detail'>
                                           <p>{curElm.Country}</p>
                                           <h3>{curElm.Title}</h3>
-                                          <h4>{curElm.Rating} <FaRegStar /></h4>
+                                          <h4>{curElm.Rating} <FaStar /></h4>
                                         </div>
                                       </div>
                                 </>

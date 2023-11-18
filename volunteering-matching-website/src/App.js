@@ -5,7 +5,6 @@ import Footer from './footer'
 import { EmailProvider } from './EmailContext';
 import { AuthProvider } from './AuthContext';
 import Rout from './rout';
-import Footer from './footer';
 import Opportunitydetail from './opportunitiesdetail';
 
 const App = () => {
