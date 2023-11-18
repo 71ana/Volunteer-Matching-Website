@@ -5,6 +5,8 @@ import Login from './login'
 import { EmailProvider } from './EmailContext';
 import Navigation from './Navigation'
 import Home from './Home'
+import HowToSignUp from "./howToSignUp";
+import Contact from "./Contact";
 import Opportunity from './opportunities'
 import Form from './form'
 
@@ -20,6 +22,8 @@ const Rout = ({opportunity, setOpportunity, detail, view, close, setClose, form,
 
           <Route path='/registration' element={<Registration />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/howToSignUp' element={<HowToSignUp />} />
+          <Route path='/Contact' element={<Contact />} />
       </Routes>
     </EmailProvider>
     </>
