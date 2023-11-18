@@ -76,7 +76,7 @@ const Apply = () => {
             const DaysArray = DaysSnapshot.docs.map((doc) => doc.data());
 
             const EducationSnapshot = await getDocs(matchEducation);
-            const EducationArray = DaysSnapshot.docs.map((doc) => doc.data());
+            const EducationArray = EducationSnapshot.docs.map((doc) => doc.data());
 
             const ProfessionSnapshot = await getDocs(matchProfession);
             const ProfessionArray = ProfessionSnapshot.docs.map((doc) => doc.data());
@@ -119,7 +119,7 @@ const Apply = () => {
             } 
             else 
             {
-                await addDoc(dbref, {Name: Name, Adress: Adress, Phone: Phone, StartDate: StartDate, Duration: Duration, Days: Days});
+                await addDoc(dbref, {Name: Name, Adress: Adress, Phone: Phone, StartDate: StartDate, Duration: Duration, Days: Days, Education: Education, Profession: Profession, CVV: CVV, Skills: Skills, Interest: Interest, Geographic: Geographic, Roles: Roles, Travel: Travel, Accomodation: Accomodation, Days: Days, Emergency: Emergency, Questions: Questions, Terms: Terms});
                 setApplicationSent(true);
                 alert("Your application was sent!");
             }
