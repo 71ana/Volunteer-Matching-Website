@@ -26,6 +26,7 @@ How It Works:
 
 Administrator Management:
 
+To Log in as Admin: username = admin and password = admin
 Administrators log in to a dedicated dashboard, crafted with React, to oversee and manage users, programs, and applications effectively.
 The admin interface streamlines tasks related to user verification, program updates, and application processing.
 Client Engagement:
