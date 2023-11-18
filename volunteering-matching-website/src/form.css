@@ -27,7 +27,7 @@
 }
 .formcontainer .emptyform .emptyformbtn
 {
-    margin-left: 170px;
+    margin-left: 190px;
     text-decoration: none;
     color: #fff;
     padding: 10px 20px;
@@ -150,9 +150,9 @@
     letter-spacing: 1px;
 }
 
-.formcontainer .checkout {
+.formcontainer .apply {
     margin-top: 30px; /* Adjust the top margin as needed */
-    margin-left: 53%;
+    margin-left: 42%;
     padding: 10px 20px;
     color: #fff;
     border: none;
