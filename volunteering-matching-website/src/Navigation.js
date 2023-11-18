@@ -57,10 +57,10 @@ const Navigation = ({searchbtn}) => {
                         <Link to='/opportunity' className='link'>Opportunities</Link>
                     </li>
                     <li>
-                        <Link to='/contact' className='link'>Contact</Link>
+                        <Link to='/Contact' className='link'>Contact</Link>
                     </li>
                     <li>
-                        <Link to='/howtosignup' className='link'>How to sign up?</Link>
+                        <Link to='/howToSignUp' className='link'>How to sign up?</Link>
                     </li>
                     <li className="admin">
                         { 

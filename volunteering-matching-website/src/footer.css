@@ -29,6 +29,7 @@
 }
 
 .footer .about .logo img {
+    margin-left: 30%;
     height: 80px;
     width: 40%; /* Adjusted width for the logo */
 }
@@ -37,6 +38,7 @@
     margin-top: 20px; /* Reduced margin top */
     font-size: 16px;
     color: #ccc; /* Lighter text color */
+    text-align: center;
 }
 
 .footer .about .detail .icon {
