@@ -72,7 +72,7 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
     }
 
         <h2 className='opportunitys_title'>All the countries in which we have available programs</h2>
-        <p className='opportunitys_subtitle'>home -> opportunities</p>
+        <p className='opportunitys_subtitle'>home . opportunities</p>
 
     <div className='oppportunities-display'>
         <div className='opportunitys'>
@@ -103,11 +103,8 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                             <li onClick={() => filterOrganization("Red Cross/Red Crescent")}>Red Cross/Red Crescent</li>
                             <li onClick={() => filterOrganization("Doctors Without Borders")}>Doctors Without Borders</li>
                             <li onClick={() => filterOrganization("Volunteers of America")}>Volunteers of America</li>
-                            <li onClick={() => filterOrganization("Habitat for Humanity")}>Habitat for Humanity</li>
-                            <li onClick={() => filterOrganization("Greenpeace")}>Greenpeacet</li>
-                            <li onClick={() => filterOrganization("Goodwill Industries")}>Goodwill Industriest</li>
-                            <li onClick={() => filterOrganization("United Nations Volunteers (UNV)")}>United Nations Volunteers (UNV)</li>
-                            <li onClick={() => filterOrganization("Ashoka")}>Ashoka</li>
+                            <li onClick={() => filterOrganization("Greenpeace")}>Greenpeace</li>
+                            <li onClick={() => filterOrganization("Goodwill Industries")}>Goodwill Industries</li>                    
                             <li onClick={() => filterOrganization("Teach For All")}>Teach For All</li>
                             <li onClick={() => filterOrganization("Mercy Corps")}>Mercy Corps</li>
                         </ul>
