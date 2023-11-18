@@ -19,7 +19,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 32px;
-    color: pink;
+    color: red;
     font-weight: 200;
 }
 
@@ -81,7 +81,7 @@
     color: #fff;
     border: none;
     outline: none;
-    background-color: pink;
+    background-color: red;
     margin-top: 30px; 
     cursor: pointer;
     text-align: center;
@@ -94,7 +94,7 @@
     color: #fff;
     border: none;
     outline: none;
-    background-color: pink;
+    background-color: red;
     margin-top: 30px; 
     cursor: pointer;
     text-align: center;
