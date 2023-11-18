@@ -1,3 +1,17 @@
+/* CSS FOR ALL*/
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, "Lucida Handwriting", sans-serif, FontAwesome;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+/* CSS FOR footer*/
+
 .footer{
     background-color: #e55039;
     padding: 6%;
@@ -6,3 +20,5 @@
 .text-center{
     text-align: center;
 }
+
+
