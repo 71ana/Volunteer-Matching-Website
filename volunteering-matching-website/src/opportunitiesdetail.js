@@ -8,8 +8,8 @@ const collectionReference = collection(db, "Opportunitydetail");
     const querySnapshot = await getDocs(collectionReference);
     querySnapshot.docs.forEach((doc) => {
       const opportunityData = doc.data();
-      const { id, Title, Country, Rating, Img } = opportunityData;
-      const opportunity = { id, Title, Country, Rating, Img };
+      const { id, Title, Country, Rating, Img, Organization, Description} = opportunityData;
+      const opportunity = { id, Title, Country, Rating, Img, Organization, Description };
       Opportunitydetail.push(opportunity);
     });
 
