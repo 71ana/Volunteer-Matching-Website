@@ -5,37 +5,59 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-.top_banner
-{
-    padding: 30px 40px;
-    width: 100%;
-    background: #e3edf6;
-}
-.top_banner .container
-{
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.top_banner .container .detail
-{
-    margin-top: 8%;
-    margin-left: 30px;
-    text-align: center;
-}
-.top_banner .container .detail h2
+.topBanner .container .detail h2
 {
     font-size: 52px;
-    color: rgb(119, 96, 100);
+    color: black;
     margin-right: 50%;
     margin-bottom: 4000px;
 }
-.top_banner .container h2
+.topBanner .container h2
 {
-    text-align: center;
-    color: rgb(119, 96, 100);
+    color: black;
+    margin-right: 3%;
+    margin-top: 4%;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-left: 1%;
 }
-.top_banner .container .detail .link
+
+.topBanner .container p
+{
+    color: black;
+    margin-right: 10%;
+    margin-left: 1%;
+    margin-top: 2%;
+    font-size: 18px;
+}
+
+.topBanner .container .detail .customLink 
+{
+    color: rgb(109, 11, 11);
+    font-size: 25px;
+    margin-top: 4%;
+}
+
+.topBanner .container .detail .customLink:hover {
+    background: white;
+    color: #fff;
+    margin-top: 4%;
+    margin-left: 3%;
+}
+
+
+.topBanner .container .imageBox
+{
+    margin-top: 2%;
+    width: 10%;
+    margin-bottom: 1%;
+}
+
+.topBanner .container .imageBox img
+{
+    width: 1000%;
+}
+.topBanner .container .detail .link
 {
     padding: 10px 20px;
     text-decoration: none;
@@ -44,9 +66,9 @@
     background: #fff;
     transition: 0.5s;
 }
-.top_banner .container .detail .link:hover
+.topBanner .container .detail .link:hover
 {
-    background: #0989ff;
+    background: white;
     color: #fff;
 }
 .product_type
@@ -70,7 +92,7 @@
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    background: #fee5f4;
+    background: rgb(192, 52, 52);
     overflow: hidden;
     cursor: pointer;
 }
@@ -84,6 +106,7 @@
     margin-top: 50px;
     margin-left: 55px;
     transition: 0.5s;
+    border-radius: 5%;
 }
 .product_type .container .box .img_box:hover img
 {
@@ -94,11 +117,12 @@
     max-width: 100%;
     text-align: center;
     align-items: center;
+    color: white;
 }
 .product_type .container .box .detail p
 {
     margin-top: 10px;
-    color: #9a9a9a;
+    color: white;
 }
 .about
 {
@@ -123,7 +147,7 @@
 }
 .about .container .box .icon
 {
-    color: blue;
+    color: red;
     font-size: 32px;
     margin-top: 10px;
 }
@@ -212,7 +236,7 @@
 }
 .product .container .box .img_box .icon li:hover
 {
-    background: #0989ff;
+    background: red;
     color: #fff;
 }
 .product .container .box .detail
@@ -233,13 +257,13 @@
 }
 .product .container .box:hover .detail h3
 {
-    color: #0989ff;
+    color: red;
 }
 .product .container .box .detail h4
 {
     margin-top: 5px;
     font-size: 14px;
-    color: #0989ff;
+    color: red;
     letter-spacing: 1px;
 }
 .banner
@@ -250,7 +274,7 @@
 .banner .container
 {
     padding: 30px 40px;
-    background: #0989ff;
+    background: red;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -395,5 +419,5 @@
 }
 .product_detail .container .productbox .detail button:hover
 {
-    background: #0989ff;
+    background: red;
 }
