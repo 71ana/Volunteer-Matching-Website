@@ -40,7 +40,7 @@ const App = () => {
     })
     if(exsit)
     {
-      alert("This opportunity has already been chosen by you. Go to the form section to complete the additional information required.")
+      alert("You have chosen already another program. Go to the form section to complete the additional information required.")
     }
     else
     { 
