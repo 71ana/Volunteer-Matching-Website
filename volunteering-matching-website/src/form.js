@@ -2,33 +2,10 @@ import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import './form.css'
+import { FaStar } from "react-icons/fa6";
+import { MdDelete } from "react-icons/md";
 
 const Form = ({form, setForm}) => {
-    const incqty = (opportunity) => 
-    {
-        const exsit = form.find((x) => 
-        {
-            return x.id === opportunity.id
-        })
-        setForm(form.map((curElm) => 
-        {
-            return curElm.id === opportunity.id ? {...exsit, qty: exsit.qty + 1} : curElm
-        }))
-    }
-
-    // Dec Qty
-    const decqty = (opportunity) => 
-    {
-        const exsit = form.find((x) => 
-        {
-            return x.id === opportunity.id
-        })
-        setForm(form.map((curElm) => 
-        {
-            return curElm.id === opportunity.id ? {...exsit, qty: exsit.qty - 1} : curElm
-        }))
-    }
-    //Remove form opportunity
     const removeopportunity = (opportunity) => 
     {
         const exsit = form.find((x) => 
@@ -50,7 +27,7 @@ const Form = ({form, setForm}) => {
     <div className='formcontainer'>
         {form.length === 0 && 
         <div className='emptyform'>
-        <h2 className='empty'>You have not chosen any program available yet.</h2>
+        <h2 className='empty'>You have not chosen any program available.</h2>
         <Link to='/opportunity' className='emptyformbtn'>Look for a volunteering program that fits you!</Link>
         </div>
         }
@@ -67,16 +44,10 @@ const Form = ({form, setForm}) => {
                                 <div className='info'>
                                 <h4>{curElm.Country}</h4>
                                 <h3>{curElm.Title}</h3>
-                                <p>Price: {curElm.Rating} RON</p>
-                                <div className='qty'>
-                                    <button className='decqty' onClick={() => decqty(curElm)}>-</button>
-                                    <input type='text' value={curElm.qty}></input> 
-                                    <button className='incqty' onClick={() => incqty(curElm)}>+</button>                               
-                                </div>
-                                <h4 className='subtotal'>subtotal: {curElm.Price * curElm.qty} RON</h4>
+                                <p>Rating: {curElm.Rating} <FaStar/></p>
                                 </div>
                                 <div className='close'>
-                                <button onClick={() => removeopportunity(curElm)}><AiOutlineClose /></button>
+                                <button onClick={() => removeopportunity(curElm)}><MdDelete /></button>
                                 </div>
                             </div>
                         </div>
@@ -87,8 +58,7 @@ const Form = ({form, setForm}) => {
         {
             form.length > 0 &&
             <>
-            <h2 className='totalprice'>total: {Totalprice} RON</h2>
-            <Link to='/checkout' className='checkout'>Apply to this program</Link>
+            <Link to='/apply' className='apply'>Apply to this program</Link>
             </>
         }
     </div>
