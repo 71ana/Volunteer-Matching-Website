@@ -7,14 +7,19 @@ import Navigation from './Navigation'
 import Home from './Home'
 import HowToSignUp from "./howToSignUp";
 import Contact from "./Contact";
+import Opportunity from './opportunities'
+import Form from './form'
 
 
-const Rout = ({product, setProduct, detail, view, close, setClose, cart, setCart, addtocart}) => {
+const Rout = ({opportunity, setOpportunity, detail, view, close, setClose, form, setForm, addtoform}) => {
   return (
     <>
     <EmailProvider>
       <Routes>
-          <Route path='/' element={<Home detail={detail} view={view} close={close} setClose={setClose} addtocart={addtocart}/>}/>
+          <Route path='/' element={<Home detail={detail} view={view} close={close} setClose={setClose} addtoform={addtoform}/>}/>
+          <Route path='/opportunity' element={<Opportunity opportunity={opportunity} setOpportunity={setOpportunity} detail={detail} view={view} close={close} setClose={setClose} addtoform={addtoform}/>} />
+          <Route path='/form' element={<Form form={form} setForm={setForm} />} />
+
           <Route path='/registration' element={<Registration />} />
           <Route path='/login' element={<Login />} />
           <Route path='/howToSignUp' element={<HowToSignUp />} />
