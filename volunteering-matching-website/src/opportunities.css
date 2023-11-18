@@ -5,12 +5,12 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-.products
+.opportunitys
 {
     padding: 30px 40px;
     width: 100%;
 }
-.products h2
+.opportunitys h2
 {
     font-size: 42px;
     letter-spacing: 1px;
@@ -18,51 +18,51 @@
     font-weight: 300;
     color: #010f1c;
 }
-.products p
+.opportunitys p
 {
     margin-top: 10px;
     color: #9a9a9a;
 }
-.products .container
+.opportunitys .container
 {
     margin-top: 20px;
     max-width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.products .container .filter
+.opportunitys .container .filter
 {
     padding: 20px 30px;
 }
-.products .container .filter .categories h3
+.opportunitys .container .filter .categories h3
 {
     color: #010f1c;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
 }
-.products .container .filter .categories ul 
+.opportunitys .container .filter .categories ul 
 {
     margin-top: 10px;
 }
-.products .container .filter .categories ul li
+.opportunitys .container .filter .categories ul li
 {
     list-style: none;
     margin-top: 20px;
     color: #010f1c;
     cursor: pointer;
 }
-.products .container .productbox
+.opportunitys .container .opportunitybox
 {
     margin-right: 0%;
 }
-.products .container .productbox .contant
+.opportunitys .container .opportunitybox .contant
 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.products .container .productbox .contant .box
+.opportunitys .container .opportunitybox .contant .box
 {
     padding: 10px 20px;
     overflow: hidden;
@@ -75,23 +75,23 @@
     border-radius: 5px;
     margin-right: 20px;
 }
-.products .container .productbox .contant .box:hover
+.opportunitys .container .opportunitybox .contant .box:hover
 {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.products .container .productbox .contant .box .img_box
+.opportunitys .container .opportunitybox .contant .box .img_box
 {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e2e0e0;
 }
-.products .container .productbox .contant .box .img_box img
+.opportunitys .container .opportunitybox .contant .box .img_box img
 {
     width: 300px;
     height: 250px;
     margin-right: 50px;
 }
-.products .container .productbox .contant .box .img_box .icon
+.opportunitys .container .opportunitybox .contant .box .img_box .icon
 {
     z-index: 1;
     position: relative;
@@ -101,11 +101,11 @@
     margin-top: 20px;
     transition: 0.5s;
 }
-.products .container .productbox .contant .box:hover .img_box .icon
+.opportunitys .container .opportunitybox .contant .box:hover .img_box .icon
 {
     transform: translateX(-130px);
 }
-.products .container .productbox .contant .box .img_box .icon li
+.opportunitys .container .opportunitybox .contant .box .img_box .icon li
 {
     list-style: none;
     padding: 10px 10px;
@@ -117,7 +117,7 @@
     font-size: 18px;
 }
 
-.products .container .productbox .contant .box .img_box .icon a
+.opportunitys .container .opportunitybox .contant .box .img_box .icon a
 {
     list-style: none;
     padding: 10px 10px;
@@ -128,40 +128,40 @@
     transition: 0.5s;
     font-size: 18px;
 }
-.products .container .productbox .contant .box .img_box .icon li:hover
+.opportunitys .container .opportunitybox .contant .box .img_box .icon li:hover
 {
-    background: pink;
+    background: red;
     color: #fff;
 }
 
-.products .container .productbox .contant .box .img_box .icon a:hover
+.opportunitys .container .opportunitybox .contant .box .img_box .icon a:hover
 {
-    background: pink;
+    background: red;
     color: #fff;
 }
-.products .container .productbox .contant .box .detail
+.opportunitys .container .opportunitybox .contant .box .detail
 {
     margin-top: 10px;
 }
-.products .container .productbox .contant .box .detail h3
+.opportunitys .container .opportunitybox .contant .box .detail h3
 {
     font-size: 16px;
     margin-top: 5px;
     color: #010f1c;
     transition: 0.5s;
 }
-.products .container .productbox .contant .box:hover .detail h3
+.opportunitys .container .opportunitybox .contant .box:hover .detail h3
 {
-    color: pink;
+    color: red;
 }
-.products .container .productbox .contant .box .detail h4
+.opportunitys .container .opportunitybox .contant .box .detail h4
 {
     margin-top: 5px;
     font-size: 14px;
-    color: pink;
+    color: red;
     letter-spacing: 1px;
 }
-.product_detail
+.opportunity_detail
 {
     margin-top: 30px;
     padding: 30px 40px;
@@ -172,7 +172,7 @@
     margin-top: -20%;
     background: rgba(0, 0, 0, 0.24);
 }
-.product_detail .container
+.opportunity_detail .container
 {
     margin-top: 7%;
     margin-left: 8%;
@@ -183,7 +183,7 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.product_detail .container .closebtn
+.opportunity_detail .container .closebtn
 {
     margin-left: 100%;
     border: none;
@@ -192,7 +192,7 @@
     font-size: 22px;
     cursor: pointer;
 }
-.product_detail .container .productbox
+.opportunity_detail .container .opportunitybox
 {
     max-width: 100%;
     display: flex;
@@ -200,24 +200,24 @@
     margin-top: 20px;
     justify-content: space-between;
 }
-.product_detail .container .productbox .img-box
+.opportunity_detail .container .opportunitybox .img-box
 {
     padding: 20px 30px;
     width: 400px;
     height: 350px;
     background: #f1f1f1;
 }
-.product_detail .container .productbox .img-box img
+.opportunity_detail .container .opportunitybox .img-box img
 {
     width: 250px;
     height: 250px;
 }
-.product_detail .container .productbox .detail
+.opportunity_detail .container .opportunitybox .detail
 {
     margin-left: 30px;
     margin-top: 10px;
 }
-.product_detail .container .productbox .detail h4
+.opportunity_detail .container .opportunitybox .detail h4
 {
     text-transform: uppercase;
     font-size: 14px;
@@ -225,7 +225,7 @@
     color: #9a9a9a;
     letter-spacing: 1px;
 }
-.product_detail .container .productbox .detail h2
+.opportunity_detail .container .opportunitybox .detail h2
 {
     margin-top: 20px;
     font-size: 32px;
@@ -233,19 +233,19 @@
     text-transform: capitalize;
     letter-spacing: 1px;
 }
-.product_detail .container .productbox .detail p
+.opportunity_detail .container .opportunitybox .detail p
 {
     margin-top: 10px;
     color: #4a4a4a;
 }
-.product_detail .container .productbox .detail h3
+.opportunity_detail .container .opportunitybox .detail h3
 {
     margin-top: 10px;
-    color: pink;
+    color: red;
     font-size: 32px;
     letter-spacing: 1px;
 }
-.product_detail .container .productbox .detail button
+.opportunity_detail .container .opportunitybox .detail button
 {
     margin-top: 30px;
     padding: 15px 60px;
@@ -257,7 +257,7 @@
     outline: none;
     cursor: pointer;
 }
-.product_detail .container .productbox .detail button:hover
+.opportunity_detail .container .opportunitybox .detail button:hover
 {
-    background: pink;
+    background: red;
 }

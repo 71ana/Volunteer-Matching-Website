@@ -6,6 +6,7 @@ import { EmailProvider } from './EmailContext';
 import Navigation from './Navigation'
 import Home from './Home'
 import Opportunity from './opportunities'
+import Form from './form'
 
 
 const Rout = ({opportunity, setOpportunity, detail, view, close, setClose, form, setForm, addtoform}) => {

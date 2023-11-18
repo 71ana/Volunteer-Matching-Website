@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BsEye } from 'react-icons/bs';
 import { AiOutlineHeart, AiOutlineCloseCircle } from 'react-icons/ai';
-import Productdetail from './opportunitiesdetail'
+import Opportunitydetail from './opportunitiesdetail'
 import './opportunities.css'
 import { useAuth } from './AuthContext';
 import { Link } from 'react-router-dom';
@@ -19,7 +19,7 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
         })
         setOpportunity(update);
     }
-    const AllClothes = () => 
+    const AllCountries = () => 
     {
         setOpportunity(Opportunitydetail)
     }
@@ -46,9 +46,9 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                                 <div className='icon'>
                                 {
                                     isAuthenticated ? 
-                                    <button onClick={() => addtocart(curElm)}>Add To Cart</button>
+                                    <button onClick={() => addtoform(curElm)}>I'm interested!</button>
                                     :
-                                    <a href="/login"><button>Add To Cart</button></a>
+                                    <a href="/login"><button>I'm interested!</button></a>
                                 }       
                                 </div>
                             </div>
@@ -61,7 +61,7 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
     </div> : null
     }
     <div className='opportunitys'>
-        <h2>finest clothing selection</h2>
+        <h2>All the countries in which we have available programs</h2>
         <p>home . opportunities</p>
         <div className='container'>
             <div className='filter'>
@@ -69,11 +69,11 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                     <h3>countries</h3>
                     <ul>
                     <li onClick={() => AllCountries ()}>All Countries</li>
-                        <li onClick={() => filtteropportunity ("Dresses")}>Dresses</li>
-                        <li onClick={() => filtteropportunity ("Shirts")}>Shirts</li>
-                        <li onClick={() => filtteropportunity ("Jeans")}>Jeans</li>
-                        <li onClick={() => filtteropportunity ("Shoes")}>Shoes</li>
-                        <li onClick={() => filtteropportunity ("Hats")}>Hats</li>
+                        <li onClick={() => filtteropportunity ("South Africa")}>South Africa</li>
+                        <li onClick={() => filtteropportunity ("Ukraine")}>Ukraine</li>
+                        <li onClick={() => filtteropportunity ("Palestine")}>Palestine</li>
+                        <li onClick={() => filtteropportunity ("Israel")}>Israel</li>
+                        <li onClick={() => filtteropportunity ("Egypt")}>Egypt</li>
                     </ul>
                 </div>
             </div>
@@ -90,7 +90,7 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                                           <div className='icon'>
                                             {
                                                 isAuthenticated ? 
-                                                <li onClick={() => addtocart (curElm)}><AiOutlineShoppingCart /></li>
+                                                <li onClick={() => addtoform (curElm)}><AiOutlineShoppingCart /></li>
                                                 :
                                                 <a href="/login"><AiOutlineShoppingCart /></a>
                                             }
