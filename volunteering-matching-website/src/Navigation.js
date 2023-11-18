@@ -13,14 +13,14 @@ import Login from './login'
 
 const Navigation = ({searchbtn}) => { 
     const [search, setSearch] = useState()
+    const { email, setEmail} = useState(window.localStorage.getItem("email"));
     const { isAuthenticated, setAuthenticationStatus } = useAuth();
-    const { email, setEmail } = useEmail();  
 
     return (
     <>    
-    <div className='login-container'> 
+    {/* <div className='login-container'> 
         <Login email={email}/>       
-    </div>
+    </div> */}
           <div className="mainHeader"> 
             <div className='container'>
                 <div className='logo'>
@@ -38,7 +38,7 @@ const Navigation = ({searchbtn}) => {
                                 <div className='user_icon'>                      
                                     <AiOutlineUser/>
                                 </div> 
-                                <p>Welcome, {email}!</p> 
+                                <p>Welcome, {window.localStorage.getItem("email")}!</p> 
                             </div>   
                         )
                     }                    
@@ -67,7 +67,7 @@ const Navigation = ({searchbtn}) => {
                     </li>
                     <li className="admin">
                         { 
-                            isAuthenticated && email === 'admin' && 
+                            isAuthenticated && window.localStorage.getItem("email") === 'admin' && 
                             (
                                 <Link to='/admin-programs' className='link'>Manage programs</Link>
                             )
@@ -75,7 +75,7 @@ const Navigation = ({searchbtn}) => {
                     </li>
                     <li className="adminUsers">
                         { 
-                            isAuthenticated && email === 'admin' && 
+                            isAuthenticated && window.localStorage.getItem("email") === 'admin' && 
                             (
                                 <Link to='/admin-users' className='link'>Manage users</Link>
                             )
@@ -83,7 +83,7 @@ const Navigation = ({searchbtn}) => {
                     </li>
                     <li className="adminApplications">
                         { 
-                            isAuthenticated && email === 'admin' && 
+                            isAuthenticated && window.localStorage.getItem("email") === 'admin' && 
                             (
                                 <Link to='/admin-application' className='link'>Manage applications</Link>
                             )
@@ -94,7 +94,7 @@ const Navigation = ({searchbtn}) => {
             <div className='auth'>
                 {
                     isAuthenticated ?
-                    <button onClick={() => { setAuthenticationStatus(false); window.location.reload();}}><CiLogout /></button>
+                    <button onClick={ () => {setAuthenticationStatus(false); window.location.reload();} }><CiLogout /></button>
                     :
                     <Link to="/login" className="auth-link" ><CiLogin /></Link>
                 }                          

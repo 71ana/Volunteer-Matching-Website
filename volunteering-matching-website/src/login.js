@@ -27,13 +27,15 @@ const Login = () => {
             const passwordSnapshot = await getDocs(matchPassword);
             const passwordArray = passwordSnapshot.docs.map((doc) => doc.data());
 
-            <input
-                type='text'
-                id='email'
-                placeholder='E-mail'
-                value={email} // Use the email state as the input value
-                onChange={(e) => setEmail(e.target.value)}
-            ></input>
+            ;debugger
+            localStorage.setItem("email", email);
+            // <input
+            //     type='text'
+            //     id='email'
+            //     placeholder='E-mail'
+            //     value={email} // Use the email state as the input value
+            //     onChange={(e) => {setEmail(e.target.value); }} 
+            // ></input>
 
             if (emailArray.length > 0 && passwordArray.length > 0) 
             {     

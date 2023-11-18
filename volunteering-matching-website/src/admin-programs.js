@@ -22,7 +22,7 @@ const AdminPrograms = () => {
         if(adddata)
         {
             alert("Data added successfully!");
-            window.location.reload();
+            await fetch();
         }
         else
         {
@@ -61,9 +61,9 @@ const AdminPrograms = () => {
         const updateref = doc(dbref, id);
         try 
         {
-            await updateDoc(updateref, {Title: title, Country: country, Rating: rating, Img: image, Description: description, Organization: organization});
+            await updateDoc(updateref, {Title: title, Country: country, Rating: rating, Img: image, Organization: organization, Description: description});
             alert("Data updated successfully!");
-            window.location.reload();
+            await fetch();
         } 
         catch (error) 
         {
@@ -78,7 +78,7 @@ const AdminPrograms = () => {
         {
             await deleteDoc(delref);
             alert("Data deleted successfully!");
-            window.location.reload();
+            await fetch();
         } 
         catch (error) 
         {
