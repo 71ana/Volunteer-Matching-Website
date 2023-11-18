@@ -24,7 +24,7 @@ const Footer = () => {
 
                     <div className='about'>
                         <div className='logo'>
-                            <img src='' alt='logo'></img>
+                            <img src='./img/logo.jpg' alt='logo'></img>
                         </div>
                         <div className='detail'>
                             <p>Connect with us to make a difference! Explore rewarding volunteer opportunities, learn more about our mission, and stay updated on social media!</p>
