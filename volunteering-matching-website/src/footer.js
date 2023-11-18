@@ -1,46 +1,55 @@
 import React from "react";
 import "./footer.css";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-
+import { AiOutlineInstagram } from 'react-icons/ai';
+import { RiFacebookFill } from 'react-icons/ri';
+import { AiOutlineTwitter } from 'react-icons/ai';
+import { BsYoutube } from 'react-icons/bs';
+import './footer.css'
 const Footer = () => {
     return (
         <>
-            <section className="footer">
-                <div className="container">
-                    <div className="social text-left">
+            <div className='footer'>
+                <div className='container'>
+
+                    <section className="page">
+                        <h2>Countries</h2>
+                        <ul className="category-list">
+                            <li>South Africa</li>
+                            <li>Ukraine</li>
+                            <li>Palestine</li>
+                            <li>Israel</li>
+                            <a href='#'>See more...</a>
+                        </ul>
+                    </section>
+
+                    <div className='about'>
+                        <div className='logo'>
+                            <img src='' alt='logo'></img>
+                        </div>
+                        <div className='detail'>
+                            <p>Connect with us to make a difference! Explore rewarding volunteer opportunities, learn more about our mission, and stay updated on social media!</p>
+                            <div className='icon'>
+                                <li><RiFacebookFill /></li>
+                                <li><AiOutlineInstagram /></li>
+                                <li><AiOutlineTwitter /></li>
+                                <li><BsYoutube /></li>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='page'>
+                        <h3>Contact Us!</h3>
                         <ul>
-                            <li>
-                                <a href="#" className="icon-link">
-                                    <FaFacebook />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="icon-link">
-                                    <FaInstagram />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="icon-link">
-                                    <FaTwitter />
-                                </a>
-                            </li>
+                            <li>+40723719139, flavia.stegaru@student.upt.ro</li>
+                            <li>+40757571884, oana.spatacean@student.upt.ro</li>
                         </ul>
                     </div>
 
-                    <p className="text-center rights-text">
-                        Contact Us
-                    </p>
 
-                    <div className="text-right">
-                        <h2>Start Volunteering Today!</h2>
-                    </div>
                 </div>
-            </section>
+            </div>
         </>
-    );
-};
-
+    )
+}
 
 export default Footer
