@@ -7,29 +7,24 @@
 }
 .opportunitys
 {
-    float: left;
     padding: 30px 40px;
-    width: 20%;
-    display: inline-block;
+    width: 100%;
+    margin-bottom: 20%;
 }
-
-.opportunitys_title{
+.opportunities_title{
     margin-top: 5%;
     margin-left: 3%;
-    margin-bottom: 1%;
-    color: black;
-    font-weight: 500;
     font-size: 48px;
     letter-spacing: 1px;
-    font-family: Arial, sans-serif;
     text-transform: uppercase;
+    font-weight: 300;
+    color: black;
 }
 
-.opportunitys_subtitle{
+.opportunities_subtitle{
     margin-left: 3%;
+    margin-top: 10px;
     color: #9a9a9a;
-    margin-bottom: 5%;
-    font-size: 20px;
 }
 
 .opportunitys h2
@@ -49,51 +44,44 @@
 {
     margin-top: 20px;
     max-width: 100%;
-    display: inline-list-item;
+    display: flex;
     justify-content: space-between;
+    float: left;
 }
-.opportunitys .container .filter {
-    padding: 20px;
-    margin-bottom: 20px; /* Add margin-bottom to separate filters */
+.opportunitys .container .filter
+{
+    padding: 20px 30px;
 }
-
-.opportunitys .container .filter .categories h3 {
+.opportunitys .container .filter .categories h3
+{
+    margin-top: 20%;
     color: #010f1c;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: 10px; /* Add margin-bottom to separate filter categories */
 }
-
-.opportunitys .container .filter .categories ul {
+.opportunitys .container .filter .categories ul
+{
     margin-top: 10px;
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
 }
-
-.opportunitys .container .filter .categories ul li {
+.opportunitys .container .filter .categories ul li
+{
+    list-style: none;
+    margin-top: 10px;
     color: #010f1c;
     cursor: pointer;
-    margin-top: 10px;
 }
-
-/*programs */
-
-.programs .container{
-    display: inline;
-}
-
-.programs .container .opportunitybox
+.opportunitys .container .opportunitybox
 {
-    margin-right: 2%;
+    margin-left: 1%;
 }
-.programs .container .opportunitybox .contant
+.opportunitys .container .opportunitybox .contant
 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.programs .container .opportunitybox .contant .box
+.opportunitys .container .opportunitybox .contant .box
 {
     padding: 10px 20px;
     overflow: hidden;
@@ -106,119 +94,6 @@
     border-radius: 5px;
     margin-right: 20px;
 }
-
-.programs
-{
-    display: inline;
-    padding: 30px 40px;
-    width: 50%;
-}
-.programs h2
-{
-    font-size: 42px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: #010f1c;
-}
-.programs p
-{
-    margin-top: 10px;
-    color: #9a9a9a;
-}
-
-.programs .container .opportunitybox .contant .box:hover
-{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.programs .container .opportunitybox .contant .box .img_box
-{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #e2e0e0;
-}
-.programs .container .opportunitybox .contant .box .img_box img
-{
-    width: 300px;
-    height: 250px;
-    margin-right: 50px;
-}
-.programs .container .opportunitybox .contant .box .img_box .icon
-{
-    z-index: 1;
-    position: relative;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    transition: 0.5s;
-}
-.programs .container .opportunitybox .contant .box:hover .img_box .icon
-{
-    transform: translateX(-130px);
-}
-.programs .container .opportunitybox .contant .box .img_box .icon li
-{
-    list-style: none;
-    padding: 10px 10px;
-    color: #010f1c;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background: #fff;
-    transition: 0.5s;
-    font-size: 18px;
-}
-
-.programs .container .opportunitybox .contant .box .img_box .icon a
-{
-    list-style: none;
-    padding: 10px 10px;
-    color: #010f1c;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background: #fff;
-    transition: 0.5s;
-    font-size: 18px;
-}
-.programs .container .opportunitybox .contant .box .img_box .icon li:hover
-{
-    background: red;
-    color: #fff;
-}
-
-.programs .container .opportunitybox .contant .box .img_box .icon a:hover
-{
-    background: red;
-    color: #fff;
-}
-.programs .container .opportunitybox .contant .box .detail
-{
-    margin-top: 10px;
-}
-.programs .container .opportunitybox .contant .box .detail h3
-{
-    font-size: 16px;
-    margin-top: 5px;
-    color: #010f1c;
-    transition: 0.5s;
-}
-.programs .container .opportunitybox .contant .box:hover .detail h3
-{
-    color: red;
-}
-.programs .container .opportunitybox .contant .box .detail h4
-{
-    margin-top: 5px;
-    font-size: 14px;
-    color: red;
-    letter-spacing: 1px;
-}
-
-.opportunity_detail .container .opportunitybox .detail .description{
-    font-size: 20px;
-    color: black;
-}
-
 .opportunitys .container .opportunitybox .contant .box:hover
 {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -237,7 +112,7 @@
 }
 .opportunitys .container .opportunitybox .contant .box .img_box .icon
 {
-    z-index: 1;
+
     position: relative;
     right: 0;
     display: flex;
@@ -406,6 +281,6 @@
     background: red;
 }
 
-.opportunities-display{
-    display: inline-block;
+.opportunities_display{
+    display: inline;
 }

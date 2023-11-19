@@ -71,8 +71,8 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
         </div> : null
     }
 
-        <h2 className='opportunitys_title'>All the countries in which we have available programs</h2>
-        <p className='opportunitys_subtitle'>home . opportunities</p>
+        <h2 className='opportunities_title'>All the countries in which we have available programs</h2>
+        <p className='opportunities_subtitle'>home . opportunities</p>
 
     <div className='oppportunities-display'>
         <div className='opportunitys'>
@@ -93,8 +93,6 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                             <li onClick={() => filteropportunity ("Sierra Leone")}>Sierra Leone</li>
                         </ul>
                     </div>
-                </div>
-                <div className='filter'>
                     <div className='categories'>
                         <h3>Organizations</h3>
                         <ul>
@@ -107,13 +105,10 @@ const Opportunity = ({opportunity, setOpportunity, detail, view, close, setClose
                             <li onClick={() => filterOrganization("Goodwill Industries")}>Goodwill Industries</li>                    
                             <li onClick={() => filterOrganization("Teach For All")}>Teach For All</li>
                             <li onClick={() => filterOrganization("Mercy Corps")}>Mercy Corps</li>
+                            <li onClick={() => filterOrganization("Random")}>Random</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-            <div className='programs'>
-                <div className='container'>
                     <div className='opportunitybox'>
                         <div className='contant'>
                             {
