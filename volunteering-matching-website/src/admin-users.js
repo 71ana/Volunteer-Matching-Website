@@ -15,7 +15,7 @@ const CrudUsers = () => {
 
     const add = async () =>
     {
-        const adddata = await addDoc(dbref, {Name: Name, Email: Email, Password: Password});
+        const adddata = await addDoc(dbref, {Name: Name, Email: Email});
 
         if(adddata)
         {
@@ -48,8 +48,7 @@ const CrudUsers = () => {
         })
         setId(id);
         setName(matchId.Name);  
-        setEmail(matchId.Email);
-        setPassword(matchId.Password);  
+        setEmail(matchId.Email); 
     }
 
     const update = async () =>
@@ -57,7 +56,7 @@ const CrudUsers = () => {
         const updateref = doc(dbref, id);
         try 
         {
-            await updateDoc(updateref, {Name: Name, Email: Email, Password: Password});
+            await updateDoc(updateref, {Name: Name, Email: Email});
             alert("Data updated successfully!");
             await fetch();
         } 
