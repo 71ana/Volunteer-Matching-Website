@@ -92,9 +92,6 @@ const CrudUsers = () => {
             <div class='box_FORM'>
                 <input type='text' placeholder='Email' autocomplete='Off' value={Email} onChange={(e) => setEmail(e.target.value)}></input>
             </div>
-            <div class='box_FORM'>
-                <input type='text' placeholder='Password' autocomplete='Off' value={Password} onChange={(e) => setPassword(e.target.value)}></input>
-            </div>
             <button onClick={add}>Add</button>
             <button onClick={update}>Update</button>
         </div>
@@ -107,8 +104,7 @@ const CrudUsers = () => {
                             <>
                             <div className='box'>
                                 <h3>Email: {data.Email}</h3>
-                                <h3>Name: {data.Name}</h3>
-                                <h3>Password: {data.Password}</h3>                  
+                                <h3>Name: {data.Name}</h3>                
                                 <button onClick={ () => passData (data.id) }>Update</button>
                                 <button onClick={ () => del (data.id) }>Delete</button>
                             </div>

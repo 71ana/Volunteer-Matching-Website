@@ -67,7 +67,7 @@ const Navigation = ({searchbtn}) => {
                     </li>
                     <li className="admin">
                         { 
-                            isAuthenticated && window.localStorage.getItem("email") === 'admin' && 
+                            isAuthenticated && window.localStorage.getItem("email") === 'admin@yahoo.com' && 
                             (
                                 <Link to='/admin-programs' className='link'>Manage programs</Link>
                             )
@@ -75,7 +75,7 @@ const Navigation = ({searchbtn}) => {
                     </li>
                     <li className="adminUsers">
                         { 
-                            isAuthenticated && window.localStorage.getItem("email") === 'admin' && 
+                            isAuthenticated && window.localStorage.getItem("email") === 'admin@yahoo.com' && 
                             (
                                 <Link to='/admin-users' className='link'>Manage users</Link>
                             )
@@ -83,7 +83,7 @@ const Navigation = ({searchbtn}) => {
                     </li>
                     <li className="adminApplications">
                         { 
-                            isAuthenticated && window.localStorage.getItem("email") === 'admin' && 
+                            isAuthenticated && window.localStorage.getItem("email") === 'admin@yahoo.com' && 
                             (
                                 <Link to='/admin-application' className='link'>Manage applications</Link>
                             )

@@ -3,6 +3,7 @@ import {db} from './firebase'
 import './registration.css'
 import {Link} from 'react-router-dom'
 import {getDocs, addDoc, collection, where, query} from 'firebase/firestore'
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 
 const Registration = () => {
     const[name, setName] = useState('');
@@ -11,24 +12,24 @@ const Registration = () => {
     const dbref = collection(db, 'Login');
     const[metch, setMetch] = useState([]);
 
+    const auth = getAuth();
+
     const register = async () =>
     {
         const matchEmail = query(dbref, where('Email', '==', email));
         try 
         {
-            const snapshot = await getDocs(matchEmail);
-            const emailMatchingArray = snapshot.docs.map((doc) => doc.data())
+            // Create a new user with email and password
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            
+            // Access the newly created user via userCredential.user
+            const newUser = userCredential.user;
 
-            if(emailMatchingArray.length > 0)
-            {
-                alert("This Email Adress already exists!");
-            }
-            else
-            {
-                await addDoc(dbref, {Name: name, Email: email, Password: password});
-                alert("Successfully registered! We just sent you an email with more details about your account!");
-                window.location.href = '/login'; 
-            }
+            // Update user profile with the provided name
+            await updateProfile(newUser, { displayName: name });
+
+            alert('Successfully registered!');
+            window.location.href = '/login';
         } 
         catch (error) 
         {
