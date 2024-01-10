@@ -26,7 +26,7 @@ const Registration = () => {
             else
             {
                 await addDoc(dbref, {Name: name, Email: email, Password: password});
-                alert("Successfully registered!");
+                alert("Successfully registered! We just sent you an email with more details about your account!");
                 window.location.href = '/login'; 
             }
         } 
