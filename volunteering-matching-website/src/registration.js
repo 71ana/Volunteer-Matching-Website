@@ -25,7 +25,11 @@ const Registration = () => {
             }
             else
             {
-                await addDoc(dbref, {Name: name, Email: email, Password: password});
+                const bcrypt = require("bcrypt");
+                const saltRounds = 10;
+
+                const hashedPassword = bcrypt.hash(password, saltRounds);
+                await addDoc(dbref, { Name: name, Email: email, Password: hashedPassword });
                 alert("Successfully registered!");
                 window.location.href = '/login'; 
             }
