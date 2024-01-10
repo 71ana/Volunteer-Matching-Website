@@ -4,8 +4,9 @@ import './admin.css'
 import {doc, addDoc, collection, deleteDoc, getDocs, setDoc, updateDoc} from 'firebase/firestore'
 
 const AdminApplications = () => {
+    const [ id, setId ] = useState();
     const [ name, setName ] = useState('');
-    const [ adress, setAdress ] = useState('');
+    const [ Address, setAddress ] = useState('');
     const [ phone, setPhone ] = useState('');
     const [ startDate, setStartDate ] = useState('');
     const [ duration, setDuration ] = useState('');
@@ -29,7 +30,7 @@ const AdminApplications = () => {
 
     const add = async () =>
     {
-        const adddata = await addDoc(dbref, {Name: name, Adress: adress, Phone: phone, StartDate: startDate, Duration: duration, Days: days, Education: education, Profession: profession, CVV: CVV, Skills: skills, Interest: interest, Geographic: geographic, Roles: roles, Travel: travel, Accomodation: accomodation, Days: days, Emergency: emergency, Questions: questions, Terms: terms});
+        const adddata = await addDoc(dbref, {Name: name, Address: Address, Phone: phone, StartDate: startDate, Duration: duration, Days: days, Education: education, Profession: profession, CVV: CVV, Skills: skills, Interest: interest, Geographic: geographic, Roles: roles, Travel: travel, Accomodation: accomodation, Days: days, Emergency: emergency, Questions: questions, Terms: terms});
 
         if(adddata)
         {
@@ -87,7 +88,7 @@ const AdminApplications = () => {
         const updateref = doc(dbref, id);
         try 
         {
-            await updateDoc(updateref, {Name: name, Adress: adress, Phone: phone, StartDate: startDate, Duration: duration, Days: days, Education: education, Profession: profession, CVV: CVV, Skills: skills, Interest: interest, Geographic: geographic, Roles: roles, Travel: travel, Accomodation: accomodation, Days: days, Emergency: emergency, Questions: questions, Terms: terms});
+            await updateDoc(updateref, {Name: name, Address: Address, Phone: phone, StartDate: startDate, Duration: duration, Days: days, Education: education, Profession: profession, CVV: CVV, Skills: skills, Interest: interest, Geographic: geographic, Roles: roles, Travel: travel, Accomodation: accomodation, Days: days, Emergency: emergency, Questions: questions, Terms: terms});
             alert("Data updated successfully!");
             await fetch();
         } 
@@ -117,61 +118,61 @@ const AdminApplications = () => {
         <div class='form-container'>
             <h2>Add / Update Form for Applications</h2>
             <div class='box_FORM'>
-                <input type='text' placeholder='Name' autocomplete='Off' value={name} onChange={(e) => setTitle(e.target.value)}></input>
+                <input type='text' placeholder='Name' autocomplete='Off' value={name} onChange={(e) => setName(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Adress' autocomplete='Off' value={adress} onChange={(e) => setCountry(e.target.value)}></input>
+                <input type='text' placeholder='Address' autocomplete='Off' value={Address} onChange={(e) => setAddress(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Phone' autocomplete='Off' value={phone} onChange={(e) => setRating(e.target.value)}></input>
+                <input type='text' placeholder='Phone' autocomplete='Off' value={phone} onChange={(e) => setPhone(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Start Date' autocomplete='Off' value={startDate} onChange={(e) => setImage(e.target.value)}></input>
+                <input type='text' placeholder='Start Date' autocomplete='Off' value={startDate} onChange={(e) => setStartDate(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Duration' autocomplete='Off' value={duration} onChange={(e) => setOrganization(e.target.value)}></input>
+                <input type='text' placeholder='Duration' autocomplete='Off' value={duration} onChange={(e) => setDuration(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Days' autocomplete='Off' value={days} onChange={(e) => setTitle(e.target.value)}></input>
+                <input type='text' placeholder='Days' autocomplete='Off' value={days} onChange={(e) => setDays(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Education' autocomplete='Off' value={education} onChange={(e) => setCountry(e.target.value)}></input>
+                <input type='text' placeholder='Education' autocomplete='Off' value={education} onChange={(e) => setEducation(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Profession' autocomplete='Off' value={profession} onChange={(e) => setRating(e.target.value)}></input>
+                <input type='text' placeholder='Profession' autocomplete='Off' value={profession} onChange={(e) => setProfession(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='CVV' autocomplete='Off' value={CVV} onChange={(e) => setImage(e.target.value)}></input>
+                <input type='text' placeholder='CVV' autocomplete='Off' value={CVV} onChange={(e) => setCVV(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Skills' autocomplete='Off' value={skills} onChange={(e) => setOrganization(e.target.value)}></input>
+                <input type='text' placeholder='Skills' autocomplete='Off' value={skills} onChange={(e) => setSkills(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Interests' autocomplete='Off' value={interest} onChange={(e) => setTitle(e.target.value)}></input>
+                <input type='text' placeholder='Interests' autocomplete='Off' value={interest} onChange={(e) => setInterest(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Geographic' autocomplete='Off' value={geographic} onChange={(e) => setCountry(e.target.value)}></input>
+                <input type='text' placeholder='Geographic' autocomplete='Off' value={geographic} onChange={(e) => setGeographic(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Roles' autocomplete='Off' value={roles} onChange={(e) => setRating(e.target.value)}></input>
+                <input type='text' placeholder='Roles' autocomplete='Off' value={roles} onChange={(e) => setRoles(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Organization' autocomplete='Off' value={organization} onChange={(e) => setImage(e.target.value)}></input>
+                <input type='text' placeholder='Organization' autocomplete='Off' value={organization} onChange={(e) => setOrganization(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Travel' autocomplete='Off' value={travel} onChange={(e) => setOrganization(e.target.value)}></input>
+                <input type='text' placeholder='Travel' autocomplete='Off' value={travel} onChange={(e) => setTravel(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Accomodation' autocomplete='Off' value={accomodation} onChange={(e) => setCountry(e.target.value)}></input>
+                <input type='text' placeholder='Accomodation' autocomplete='Off' value={accomodation} onChange={(e) => setAccomodation(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Emergency' autocomplete='Off' value={emergency} onChange={(e) => setRating(e.target.value)}></input>
+                <input type='text' placeholder='Emergency' autocomplete='Off' value={emergency} onChange={(e) => setEmergency(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Questions' autocomplete='Off' value={questions} onChange={(e) => setImage(e.target.value)}></input>
+                <input type='text' placeholder='Questions' autocomplete='Off' value={questions} onChange={(e) => setQuestions(e.target.value)}></input>
             </div>
             <div class='box_FORM'>
-                <input type='text' placeholder='Terms' autocomplete='Off' value={terms} onChange={(e) => setOrganization(e.target.value)}></input>
+                <input type='text' placeholder='Terms' autocomplete='Off' value={terms} onChange={(e) => setTerms(e.target.value)}></input>
             </div>
             <button onClick={add}>Add</button>
             <button onClick={update}>Update</button>
@@ -186,7 +187,7 @@ const AdminApplications = () => {
                             <div className='box'>
                                 <h3>Id: {data.id}</h3>
                                 <h3>Name: {data.Name}</h3>
-                                <h3>Adress: {data.Adress}</h3>
+                                <h3>Address: {data.Address}</h3>
                                 <h3>Phone: {data.Phone}</h3>
                                 <h3>StartDate: {data.StartDate}</h3>    
                                 <h3>Duration: {data.Duration}</h3> 
